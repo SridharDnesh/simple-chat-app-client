@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import io from 'socket.io-client';
 import Peer from 'peerjs';
 
@@ -76,12 +76,12 @@ function App() {
       </div>
 
       <div>
-        <h2>PeerJS Video Call</h2>
+        <h2>Video Call</h2>
         <p>Your ID: {peerId}</p>
         <input
           value={remotePeerId}
           onChange={(e) => setRemotePeerId(e.target.value)}
-          placeholder="Enter remote peer ID..."
+          placeholder="Enter remote ID..."
         />
         <button onClick={callPeer}>Call</button>
 
